@@ -10,6 +10,7 @@ ${url}            https://itera-qa.azurewebsites.net/home/automation
 ListBoxes test
     Open Browser    ${url}      ${browser}
     Maximize browser window
+    Wait Until Page Contains    Test automation practice form
     Set Selenium Speed  1
 
     Input text  xpath://*[@id="name"]  Coders Arcade

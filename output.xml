@@ -1,115 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.10.7 on win32)" generated="20230512 14:23:12.995" rpa="false" schemaversion="3">
-<suite id="s1" name="ListBoxes" source="C:\Users\eadesany\PycharmProjects\RobotFramework\Automation\ListBoxes.robot">
-<test id="s1-t1" name="ListBoxes test" line="10">
+<robot generator="Robot 6.0.2 (Python 3.10.7 on win32)" generated="20230512 20:22:20.696" rpa="false" schemaversion="3">
+<suite id="s1" name="Alert" source="C:\Users\eadesany\PycharmProjects\RobotFramework\Automation\alert.robot">
+<test id="s1-t1" name="AlertTesting" line="5">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>${url}</arg>
-<arg>${browser}</arg>
+<arg>https://testautomationpractice.blogspot.com/</arg>
+<arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230512 14:23:13.259" level="INFO">Opening browser 'chrome' to base url 'https://itera-qa.azurewebsites.net/home/automation'.</msg>
-<msg timestamp="20230512 14:23:13.271" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
-<status status="PASS" starttime="20230512 14:23:13.259" endtime="20230512 14:23:18.425"/>
+<msg timestamp="20230512 20:22:20.955" level="INFO">Opening browser 'chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
+<msg timestamp="20230512 20:22:20.965" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
+<status status="PASS" starttime="20230512 20:22:20.955" endtime="20230512 20:22:25.498"/>
 </kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230512 14:23:18.426" endtime="20230512 14:23:18.551"/>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath://button[@onclick='myFunction()']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230512 20:22:25.501" level="INFO">Clicking button 'xpath://button[@onclick='myFunction()']'.</msg>
+<status status="PASS" starttime="20230512 20:22:25.499" endtime="20230512 20:22:25.585"/>
 </kw>
-<kw name="Set Selenium Speed" library="SeleniumLibrary">
-<arg>1</arg>
-<doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20230512 14:23:18.551" endtime="20230512 14:23:18.552"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230512 20:22:28.588" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230512 20:22:25.586" endtime="20230512 20:22:28.589"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>xpath://*[@id="name"]</arg>
-<arg>Coders Arcade</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230512 14:23:18.553" level="INFO">Typing text 'Coders Arcade' into text field 'xpath://*[@id="name"]'.</msg>
-<status status="PASS" starttime="20230512 14:23:18.552" endtime="20230512 14:23:21.743"/>
+<kw name="Handle Alert" library="SeleniumLibrary">
+<arg>Dismiss</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<msg timestamp="20230512 20:22:28.591" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<status status="PASS" starttime="20230512 20:22:28.590" endtime="20230512 20:22:28.613"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>xpath://*[@id="phone"]</arg>
-<arg>0504649053</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230512 14:23:21.744" level="INFO">Typing text '0504649053' into text field 'xpath://*[@id="phone"]'.</msg>
-<status status="PASS" starttime="20230512 14:23:21.743" endtime="20230512 14:23:24.871"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>xpath://*[@id="email"]</arg>
-<arg>example@gmail.com</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230512 14:23:24.872" level="INFO">Typing text 'example@gmail.com' into text field 'xpath://*[@id="email"]'.</msg>
-<status status="PASS" starttime="20230512 14:23:24.871" endtime="20230512 14:23:27.990"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>xpath://*[@id="password"]</arg>
-<arg>1234567?!</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230512 14:23:27.994" level="INFO">Typing text '1234567?!' into text field 'xpath://*[@id="password"]'.</msg>
-<status status="PASS" starttime="20230512 14:23:27.992" endtime="20230512 14:23:31.136"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>xpath://*[@id="address"]</arg>
-<arg>Pelumi 123 Finland</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230512 14:23:31.137" level="INFO">Typing text 'Pelumi 123 Finland' into text field 'xpath://*[@id="address"]'.</msg>
-<status status="PASS" starttime="20230512 14:23:31.137" endtime="20230512 14:23:34.246"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>id=female</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230512 14:23:34.247" level="INFO">Clicking element 'id=female'.</msg>
-<status status="PASS" starttime="20230512 14:23:34.246" endtime="20230512 14:23:36.323"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>id=monday</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230512 14:23:36.324" level="INFO">Clicking element 'id=monday'.</msg>
-<status status="PASS" starttime="20230512 14:23:36.324" endtime="20230512 14:23:38.382"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>id=sunday</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230512 14:23:38.385" level="INFO">Clicking element 'id=sunday'.</msg>
-<status status="PASS" starttime="20230512 14:23:38.383" endtime="20230512 14:23:40.468"/>
-</kw>
-<kw name="Select From List By Value" library="SeleniumLibrary">
-<arg>xpath:/html/body/div[1]/div[4]/div[2]/div/select</arg>
-<arg>1</arg>
-<doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<msg timestamp="20230512 14:23:40.469" level="INFO">Selecting options from selection list 'xpath:/html/body/div[1]/div[4]/div[2]/div/select' by value 1.</msg>
-<status status="PASS" starttime="20230512 14:23:40.468" endtime="20230512 14:23:48.601"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath:/html/body/div[1]/div[5]/div[2]/div[1]/div[1]/label</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230512 14:23:48.602" level="INFO">Clicking element 'xpath:/html/body/div[1]/div[5]/div[2]/div[1]/div[1]/label'.</msg>
-<status status="PASS" starttime="20230512 14:23:48.601" endtime="20230512 14:23:50.718"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath:/html/body/div[1]/div[5]/div[2]/div[2]/div[1]/label</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230512 14:23:50.719" level="INFO">Clicking element 'xpath:/html/body/div[1]/div[5]/div[2]/div[2]/div[1]/label'.</msg>
-<status status="PASS" starttime="20230512 14:23:50.719" endtime="20230512 14:23:52.842"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath:/html/body/div[1]/div[5]/div[2]/div[2]/div[2]/label</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230512 14:23:52.846" level="INFO">Clicking element 'xpath:/html/body/div[1]/div[5]/div[2]/div[2]/div[2]/label'.</msg>
-<status status="PASS" starttime="20230512 14:23:52.844" endtime="20230512 14:23:54.931"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath:/html/body/div[1]/div[5]/div[2]/div[2]/div[3]/label</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230512 14:23:54.935" level="INFO">Clicking element 'xpath:/html/body/div[1]/div[5]/div[2]/div[2]/div[3]/label'.</msg>
-<status status="PASS" starttime="20230512 14:23:54.932" endtime="20230512 14:23:57.039"/>
-</kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230512 14:23:57.040" endtime="20230512 14:24:00.236"/>
-</kw>
-<status status="PASS" starttime="20230512 14:23:13.258" endtime="20230512 14:24:00.238"/>
+<status status="PASS" starttime="20230512 20:22:20.954" endtime="20230512 20:22:28.615"/>
 </test>
-<status status="PASS" starttime="20230512 14:23:12.998" endtime="20230512 14:24:00.244"/>
+<status status="PASS" starttime="20230512 20:22:20.700" endtime="20230512 20:22:28.623"/>
 </suite>
 <statistics>
 <total>
@@ -118,7 +39,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="ListBoxes">ListBoxes</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Alert">Alert</stat>
 </suite>
 </statistics>
 <errors>
