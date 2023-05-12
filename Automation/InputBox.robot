@@ -14,15 +14,13 @@ InputBox
 
     Open Browser    ${url}    ${browser}
     Maximize Browser Window
-    Sleep   2
+    Set Selenium Speed  1
+
     input text  xpath://*[@id="twotabsearchtextbox"]        ${search_term}
     click button    xpath://*[@id="nav-search-submit-button"]
-    Sleep   2
     clear element text  xpath:/html[1]/body[1]/div[1]/header[1]/div[1]/div[1]/div[2]/div[1]/form[1]/div[2]/div[1]/input[1]
-    Sleep   2
     input text  xpath:/html[1]/body[1]/div[1]/header[1]/div[1]/div[1]/div[2]/div[1]/form[1]/div[2]/div[1]/input[1]    ${search_item2}
     click button    xpath://*[@id="nav-search-submit-button"]
-    Sleep   3
     Close Browser
 
 
