@@ -1,36 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.10.7 on win32)" generated="20230512 20:22:20.696" rpa="false" schemaversion="3">
-<suite id="s1" name="Alert" source="C:\Users\eadesany\PycharmProjects\RobotFramework\Automation\alert.robot">
-<test id="s1-t1" name="AlertTesting" line="5">
+<robot generator="Robot 6.0.2 (Python 3.10.7 on win32)" generated="20230512 21:19:23.707" rpa="false" schemaversion="3">
+<suite id="s1" name="Screenshots" source="C:\Users\eadesany\PycharmProjects\RobotFramework\Automation\screenshots.robot">
+<test id="s1-t1" name="Taking Screenshots" line="6">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>https://testautomationpractice.blogspot.com/</arg>
+<arg>https://demoqa.com/automation-practice-form</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230512 20:22:20.955" level="INFO">Opening browser 'chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
-<msg timestamp="20230512 20:22:20.965" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
-<status status="PASS" starttime="20230512 20:22:20.955" endtime="20230512 20:22:25.498"/>
+<msg timestamp="20230512 21:19:24.145" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/automation-practice-form'.</msg>
+<msg timestamp="20230512 21:19:24.168" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
+<status status="PASS" starttime="20230512 21:19:24.144" endtime="20230512 21:19:34.675"/>
 </kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>xpath://button[@onclick='myFunction()']</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20230512 20:22:25.501" level="INFO">Clicking button 'xpath://button[@onclick='myFunction()']'.</msg>
-<status status="PASS" starttime="20230512 20:22:25.499" endtime="20230512 20:22:25.585"/>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230512 21:19:34.684" endtime="20230512 21:19:35.042"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>3</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230512 20:22:28.588" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20230512 20:22:25.586" endtime="20230512 20:22:28.589"/>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>xpath://img[@src='/images/Toolsqa.jpg']</arg>
+<arg>cup.png</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230512 21:19:35.836" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="cup.png"&gt;&lt;img src="cup.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230512 21:19:35.045" endtime="20230512 21:19:35.836"/>
 </kw>
-<kw name="Handle Alert" library="SeleniumLibrary">
-<arg>Dismiss</arg>
-<doc>Handles the current alert and returns its message.</doc>
-<msg timestamp="20230512 20:22:28.591" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
-<status status="PASS" starttime="20230512 20:22:28.590" endtime="20230512 20:22:28.613"/>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>website.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230512 21:19:36.166" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="website.png"&gt;&lt;img src="website.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230512 21:19:35.837" endtime="20230512 21:19:36.167"/>
 </kw>
-<status status="PASS" starttime="20230512 20:22:20.954" endtime="20230512 20:22:28.615"/>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230512 21:19:36.167" endtime="20230512 21:19:40.461"/>
+</kw>
+<status status="PASS" starttime="20230512 21:19:24.143" endtime="20230512 21:19:40.462"/>
 </test>
-<status status="PASS" starttime="20230512 20:22:20.700" endtime="20230512 20:22:28.623"/>
+<status status="PASS" starttime="20230512 21:19:23.712" endtime="20230512 21:19:40.463"/>
 </suite>
 <statistics>
 <total>
@@ -39,7 +42,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Alert">Alert</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Screenshots">Screenshots</stat>
 </suite>
 </statistics>
 <errors>
