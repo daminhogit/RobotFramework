@@ -1,39 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.10.7 on win32)" generated="20230512 21:19:23.707" rpa="false" schemaversion="3">
-<suite id="s1" name="Screenshots" source="C:\Users\eadesany\PycharmProjects\RobotFramework\Automation\screenshots.robot">
-<test id="s1-t1" name="Taking Screenshots" line="6">
+<robot generator="Robot 6.0.2 (Python 3.10.7 on win32)" generated="20230514 21:46:39.799" rpa="false" schemaversion="3">
+<suite id="s1" name="Tables" source="C:\Users\eadesany\PycharmProjects\RobotFramework\Automation\tables.robot">
+<test id="s1-t1" name="TableValidation" line="6">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>https://demoqa.com/automation-practice-form</arg>
+<arg>https://testautomationpractice.blogspot.com/</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230512 21:19:24.145" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/automation-practice-form'.</msg>
-<msg timestamp="20230512 21:19:24.168" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
-<status status="PASS" starttime="20230512 21:19:24.144" endtime="20230512 21:19:34.675"/>
+<msg timestamp="20230514 21:46:40.268" level="INFO">Opening browser 'chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
+<msg timestamp="20230514 21:46:40.283" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
+<status status="PASS" starttime="20230514 21:46:40.267" endtime="20230514 21:46:49.266"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230512 21:19:34.684" endtime="20230512 21:19:35.042"/>
+<status status="PASS" starttime="20230514 21:46:49.267" endtime="20230514 21:46:49.430"/>
 </kw>
-<kw name="Capture Element Screenshot" library="SeleniumLibrary">
-<arg>xpath://img[@src='/images/Toolsqa.jpg']</arg>
-<arg>cup.png</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<msg timestamp="20230512 21:19:35.836" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="cup.png"&gt;&lt;img src="cup.png" width="400px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20230512 21:19:35.045" endtime="20230512 21:19:35.836"/>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${rows}</var>
+<arg>xpath://table[@name='BookTable']/tbody/tr</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20230514 21:46:49.526" level="INFO">${rows} = 7</msg>
+<status status="PASS" starttime="20230514 21:46:49.433" endtime="20230514 21:46:49.526"/>
 </kw>
-<kw name="Capture Page Screenshot" library="SeleniumLibrary">
-<arg>website.png</arg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20230512 21:19:36.166" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="website.png"&gt;&lt;img src="website.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20230512 21:19:35.837" endtime="20230512 21:19:36.167"/>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${columns}</var>
+<arg>xpath://table[@name='BookTable']/tbody/tr/th</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20230514 21:46:49.575" level="INFO">${columns} = 4</msg>
+<status status="PASS" starttime="20230514 21:46:49.528" endtime="20230514 21:46:49.575"/>
 </kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230512 21:19:36.167" endtime="20230512 21:19:40.461"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${rows}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230514 21:46:49.576" endtime="20230514 21:46:49.577"/>
 </kw>
-<status status="PASS" starttime="20230512 21:19:24.143" endtime="20230512 21:19:40.462"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${columns}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230514 21:46:49.577" endtime="20230514 21:46:49.577"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${data}</var>
+<arg>xpath://table[@name='BookTable']/tbody/tr[2]/td[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230514 21:46:49.639" level="INFO">${data} = Learn Selenium</msg>
+<status status="PASS" starttime="20230514 21:46:49.578" endtime="20230514 21:46:49.639"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${data}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230514 21:46:49.640" endtime="20230514 21:46:49.641"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${data2}</var>
+<arg>xpath://table[@name='BookTable']/tbody/tr[4]/td[3]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230514 21:46:49.670" level="INFO">${data2} = Javascript</msg>
+<status status="PASS" starttime="20230514 21:46:49.641" endtime="20230514 21:46:49.670"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${data2}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230514 21:46:49.670" endtime="20230514 21:46:49.671"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${data3}</var>
+<arg>xpath://table[@name='BookTable']/tbody/tr[4]/td[4]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230514 21:46:49.692" level="INFO">${data3} = 300</msg>
+<status status="PASS" starttime="20230514 21:46:49.671" endtime="20230514 21:46:49.692"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${data3}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230514 21:46:49.692" endtime="20230514 21:46:49.693"/>
+</kw>
+<kw name="Table Column Should Contain" library="SeleniumLibrary">
+<arg>xpath://table[@name='BookTable']</arg>
+<arg>1</arg>
+<arg>BookName</arg>
+<doc>Verifies table column contains text ``expected``.</doc>
+<status status="PASS" starttime="20230514 21:46:49.693" endtime="20230514 21:46:49.741"/>
+</kw>
+<kw name="Table Row Should Contain" library="SeleniumLibrary">
+<arg>xpath://table[@name='BookTable']</arg>
+<arg>5</arg>
+<arg>Mukesh</arg>
+<doc>Verifies that table row contains text ``expected``.</doc>
+<status status="PASS" starttime="20230514 21:46:49.741" endtime="20230514 21:46:49.779"/>
+</kw>
+<kw name="Table Cell Should Contain" library="SeleniumLibrary">
+<arg>xpath://table[@name='BookTable']</arg>
+<arg>6</arg>
+<arg>2</arg>
+<arg>Amod</arg>
+<doc>Verifies table cell contains text ``expected``.</doc>
+<msg timestamp="20230514 21:46:49.835" level="INFO">Table cell contains 'Amod'.</msg>
+<status status="PASS" starttime="20230514 21:46:49.780" endtime="20230514 21:46:49.836"/>
+</kw>
+<kw name="Table Header Should Contain" library="SeleniumLibrary">
+<arg>xpath://table[@name='BookTable']</arg>
+<arg>BookName</arg>
+<doc>Verifies table header contains text ``expected``.</doc>
+<status status="PASS" starttime="20230514 21:46:49.836" endtime="20230514 21:46:49.885"/>
+</kw>
+<status status="PASS" starttime="20230514 21:46:40.266" endtime="20230514 21:46:49.886"/>
 </test>
-<status status="PASS" starttime="20230512 21:19:23.712" endtime="20230512 21:19:40.463"/>
+<status status="PASS" starttime="20230514 21:46:39.806" endtime="20230514 21:46:49.888"/>
 </suite>
 <statistics>
 <total>
@@ -42,7 +114,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Screenshots">Screenshots</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tables">Tables</stat>
 </suite>
 </statistics>
 <errors>
